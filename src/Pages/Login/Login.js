@@ -117,7 +117,7 @@ const Login = () => {
                      
                       <PrimaryButton
               type='submit'
-              classes='btn btn-primary w-full'
+              classes='btn btn-info w-full'
             >
               {loading ? <SmallSpinner /> : 'Sign in'}
             </PrimaryButton>
@@ -132,7 +132,7 @@ const Login = () => {
           <button
             onClick={handleGoogleSignin}
            
-            className='btn btn-outline btn-primary w-full'
+            className='btn btn-outline btn-info w-full'
           >
         
                       Continue with Google
@@ -145,7 +145,7 @@ const Login = () => {
           <Link to='/signup' className='text-primary font-bold'>
             Sign up
           </Link>
-          .
+         
         </p>
       </div>
     </div>

@@ -42,14 +42,14 @@ const Header = () => {
     return (
         <div className="navbar bg-base-300 drop-shadow-md">
             <div className="navbar-start">
-                <div className="dropdown">
+                <div className="dropdown ">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden btn-sm">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
 
                     </label>
-                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={1} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <LeftSide></LeftSide>
                         
                     </ul>
@@ -60,7 +60,7 @@ const Header = () => {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><Link to='/home'>Home</Link></li>
-                    <li tabIndex={0}>
+                    <li tabIndex={2}>
                         <Link to='/media'>
                             <MdOutlinePermMedia></MdOutlinePermMedia>Media
 
@@ -109,7 +109,6 @@ const Header = () => {
                 <svg className="swap-off fill-current w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeWidth="1.5"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" /></svg>
 
 
-                {/* <svg className="swap-off fill-current w-6 h-6"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" strokeWidth="1.5"><path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" /></svg> */}
 
                 </label>
                 {
@@ -131,16 +130,15 @@ const Header = () => {
       </label>
       <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
         
-        <li><Link onClick={handleLogOut}>Logout</Link></li>
+        <Link onClick={handleLogOut} className='btn btn-info'>Logout</Link>
       </ul>
     </div>
-                         {/* {user?.displayName} */}
-                            {/* <button onClick={handleLogOut} className='btn btn-primary btn-outline'>LogOut</button> */}
+                       
      
                     </>
                     :
                     
-                    <Link to='/login' className='btn btn-primary'>Login</Link>
+                    <Link to='/login' className='btn btn-info'>Login</Link>
                 }
                 
             </div>

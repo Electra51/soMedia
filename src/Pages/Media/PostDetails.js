@@ -1,16 +1,19 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
+
 const PostDetails = () => {
+    
     const loaderData= useLoaderData()
     const perComments = loaderData;
     const { userProfile, userName, time, image,message } = perComments;
     console.log(perComments);
     return (
       
-             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 my-10">
+             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 my-10">
         
-        <div class="border col-span-2 ...">
+            <div className="border col-span-2 ...">
+                
         <div className="card w-full bg-base-100 shadow-xl">
 <div className="card-body">
 <div className='flex items-center gap-3'>
@@ -34,15 +37,15 @@ const PostDetails = () => {
 <figure><img src={image} alt="Shoes" /></figure>
 </div>
     </div>
-            <div class="border...">
+            <div className="border...">
             <div className="card w-full bg-primary text-primary-content">
-    <div className="card-body">
-      <h2 className="card-title">All Comments</h2>
-      <p>If a dog chews shoes whose shoes does he choose?</p>
-      
-    </div> 
-
-    </div>
+        <div className="card-body">
+          <h2 className="card-title">All Comments</h2>
+          <p>If a dog chews shoes whose shoes does he choose?</p>
+          
+        </div> 
+    
+        </div>
         </div>
     
     

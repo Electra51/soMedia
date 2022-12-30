@@ -4,7 +4,7 @@ import moment from 'moment';
 import { toast } from 'react-hot-toast';
 
 const PostCommentModal = ({ postDataModals, setPostDataModals }) => {
-    const { image,message,userProfile,time,userName}=postDataModals;
+    const { image,message,userProfile,time,userName,_id}=postDataModals;
     const { user } = useContext(AuthContext);
    
     const handleComment = event => {
@@ -25,6 +25,7 @@ const PostCommentModal = ({ postDataModals, setPostDataModals }) => {
             postPersonUserName: userName,
             postPersonUserMessage: message,
             postPersonPostTime: time,
+            id:_id,
             CommentTime: moment().format("dddd, MMMM Do YYYY, h:mm a")
         }
 
@@ -103,7 +104,7 @@ const PostCommentModal = ({ postDataModals, setPostDataModals }) => {
                        
                        
                         <br />
-                        <input className='btn btn-warning w-full' type="submit" value="Submit" />
+                        <input className='btn btn-info w-full' type="submit" value="Submit" />
                    </form>
                 </div>
             </div>

@@ -2,11 +2,11 @@ import ErrorPage from "../../Components/Shared/ErrorPage";
 import Main from "../../Layouts/Main";
 import About from "../../Pages/About/About";
 import Home from "../../Pages/Home/Home";
-import HomeSectionTwo from "../../Pages/Home/HomeSectionTwo";
 import Login from "../../Pages/Login/Login";
 import Media from "../../Pages/Media/Media";
 import PostDetails from "../../Pages/Media/PostDetails";
 import Signup from "../../Pages/Signup/Signup";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -25,11 +25,6 @@ const router = createBrowserRouter([
                 path: '/home',
                 element:<Home></Home>
             },
-            // {
-            //     path: '/home',
-            //     element: <HomeSectionTwo></HomeSectionTwo>,
-            //     loader: ()=> fetch('http://localhost:5000/myPosts')
-            // },
             {
                 path: '/media',
                 element: <Media></Media>,
@@ -41,9 +36,16 @@ const router = createBrowserRouter([
                 loader:({params})=>fetch(`http://localhost:5000/myPosts/${params.id}`)
                 
             },
+            // {
+            //     path: '/media/:commentId',
+            //     element: <PostDetailsHalf></PostDetailsH>,
+            //     loader:({params})=>fetch(`http://localhost:5000/comments/${params.id}`)
+                
+            // },
             {
                 path: '/about',
-                element:<About></About>
+                element: <PrivateRoute><About></About></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:5000/aboutMe/${params.email}`)
             },
             {
                 path: '/login',

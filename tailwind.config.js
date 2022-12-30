@@ -9,7 +9,7 @@ module.exports = {
         soMediaColorTheme: {
           primary: '#1b3e96',
           secondary: '#FEF9f6',
-          info:'#062029',
+          info:'#1b3e96',
           accent: '#F2E9E3',
           neutral: '#000000', //text-black
           'base-100': '#ffffff', //bg-white
@@ -19,7 +19,7 @@ module.exports = {
       {
         dark: {
           primary: '#1b3e96',
-          info:'#062029',
+          info:'#fbbd23',
           secondary: '#1F2937', //black
           accent: '#1F2937', 
           neutral: '#ffffff', //text-white

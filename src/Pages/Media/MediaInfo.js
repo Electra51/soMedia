@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {useLoaderData } from 'react-router-dom';
-import HomeSectionTwoComponent from '../Home/HomeSectionTwoComponent';
 import PerPost from './PerPost';
 import PostCommentModal from './PostCommentModal';
 
